@@ -11,13 +11,13 @@ repositories {
 dependencies {
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation enforcedPlatform("${quarkusPlatformGroupId}:quarkus-camel-bom:${quarkusPlatformVersion}")
-    implementation 'io.quarkus:quarkus-amazon-lambda'
-    implementation 'org.apache.camel.quarkus:camel-quarkus-aws2-ddb'
-    implementation 'io.quarkus:quarkus-arc'
-    testImplementation 'io.quarkus:quarkus-junit5'
-    testImplementation 'io.rest-assured:rest-assured'
+    implementation 'io.quarkus:quarkus-amazon-lambda:2.4.2.Final'
+    implementation 'org.apache.camel.quarkus:camel-quarkus-aws2-ddb:2.4.0'
+    implementation 'io.quarkus:quarkus-arc:2.4.2.Final'
+    testImplementation 'io.quarkus:quarkus-junit5:2.4.2.Final'
+    testImplementation 'io.rest-assured:rest-assured:4.4.0'
     implementation group: 'software.amazon.awssdk', name: 'apigatewaymanagementapi', version: '2.17.64'
-    implementation("com.amazonaws:aws-java-sdk-dynamodb:1.11.564")
+    implementation('com.amazonaws:aws-java-sdk-dynamodb:1.12.111')
     implementation group: 'software.amazon.awssdk', name: 'dynamodb', version: '2.17.65'
     compileOnly 'org.projectlombok:lombok:1.18.22'
 }
@@ -26,8 +26,8 @@ group 'nks.register'
 version '1.0.0-SNAPSHOT'
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 compileJava {
